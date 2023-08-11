@@ -35,7 +35,6 @@ export class SliderToggle extends LitElement {
 
   private toggleActive() {
     this.active = !this.active;
-    this.requestUpdate();
   }
 
   render() {
