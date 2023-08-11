@@ -19,10 +19,10 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [/^lit/],
-      output: components.map((component) => ({
-          entryFileNames: `atoms/${component}.js`,
-          format: 'es'
-      }))
+      output: {
+        entryFileNames: `atoms/index.js`,
+        format: 'es',
+      },
     },
   },
 })

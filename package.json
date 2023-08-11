@@ -3,11 +3,12 @@
   "private": false,
   "version": "0.9.0",
   "type": "module",
-  "main": "./dist",
-  "types": "types/lit-component.ts",
-  "module": "./dist/**",
+  "main": "dist",
   "exports": {
-    ".": "./dist"
+    ".": {
+      "import": "./dist/atomss/index.js",
+      "require": "./dist/atoms/index.js"
+    }
   },
   "scripts": {
     "dev": "vite",
