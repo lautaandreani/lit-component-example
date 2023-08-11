@@ -6,7 +6,7 @@
   "main": "dist",
   "exports": {
     ".": {
-      "import": "./dist/atomss/index.js",
+      "import": "./dist/atoms/index.js",
       "require": "./dist/atoms/index.js"
     }
   },
