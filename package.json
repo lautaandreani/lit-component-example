@@ -3,8 +3,9 @@
   "private": false,
   "version": "0.7.0",
   "type": "module",
-  "main": "dist",
+  "main": "./dist",
   "types": "types/lit-component.ts",
+  "module": "./dist/**",
   "exports": {
     ".": "./dist"
   },
