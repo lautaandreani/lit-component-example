@@ -610,6 +610,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.accent-indigo-500 {
+  accent-color: #6366f1;
+}
+
 .focus\\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
