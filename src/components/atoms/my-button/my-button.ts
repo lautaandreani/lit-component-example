@@ -13,8 +13,9 @@ export class MyButton extends LitElement {
 
   static styles = [css``, TWStyles]
 
-  _clicked() {
+  private _clicked() {
     this.checked = !this.checked
+    this.dispatchEvent(new CustomEvent('checked', { bubbles: true }))
     console.log('checked value is', this.checked)
   }
 

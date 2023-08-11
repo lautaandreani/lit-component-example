@@ -3,7 +3,7 @@ export declare class MyButton extends LitElement {
     checked: boolean;
     social: string;
     static styles: import("lit").CSSResult[];
-    _clicked(): void;
+    private _clicked;
     render(): import("lit").TemplateResult<1>;
 }
 declare global {

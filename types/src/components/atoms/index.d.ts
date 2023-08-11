@@ -1,1 +1,2 @@
-export { MyButton } from './my-button';
+export * from './my-button';
+export * from './slider-toggle';

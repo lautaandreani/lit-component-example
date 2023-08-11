@@ -15,7 +15,7 @@ export default defineConfig({
     rollupOptions: {
       external: [/^lit/],
       output: {
-        entryFileNames: `atoms/index.js`,
+        entryFileNames: `components/[name]/index.js`,
         format: 'es',
       },
     },
