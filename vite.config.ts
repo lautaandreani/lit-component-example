@@ -1,11 +1,6 @@
 import { defineConfig } from 'vite'
 import path from 'path';
 
-const components = [
-  'my-button',
-  'ch-checkbox'
-]
-
 export default defineConfig({
   resolve: {
     alias: {
