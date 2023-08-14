@@ -2,6 +2,8 @@ import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 import { TWStyles } from '../../../../tw.js'
+import { createComponent } from '@lit-labs/react'
+import React from 'react'
 
 @customElement('my-button')
 export class MyButton extends LitElement {
@@ -33,3 +35,12 @@ declare global {
     'my-button': MyButton
   }
 }
+
+export const MyButtonReact = createComponent({
+  tagName: 'my-button',
+  elementClass: MyButton,
+  react: React,
+  events: {
+    onclick: 'clicked'
+  }
+})

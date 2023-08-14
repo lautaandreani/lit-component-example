@@ -22,7 +22,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [/^lit/],
+      external: [/^(lit|react)/],
       output: {
         entryFileNames: `components/atoms/[name].js`,
         format: 'es',
