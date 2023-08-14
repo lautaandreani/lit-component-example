@@ -6,9 +6,12 @@
   "main": "dist",
   "exports": {
     ".": {
-      "import": "./dist/atoms/index.js",
-      "require": "./dist/atoms/index.js"
-    }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/components",
+      "require": "./dist/components/index.js"
+    },
+    "./lit-component-example/atoms/button": "./dist/components/atoms/my-button.js",
+    "./lit-component-example/atoms/toggle": "./dist/components/atoms/slider-toggle.js"
   },
   "files": [
     "dist"
