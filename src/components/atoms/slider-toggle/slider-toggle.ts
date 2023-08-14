@@ -2,8 +2,6 @@ import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
 import { TWStyles } from '../../../../tw.js'
-import { createComponent } from "@lit-labs/react";
-import React from "react";
 
 @customElement('slider-toggle')
 export class SliderToggle extends LitElement {
@@ -52,12 +50,3 @@ declare global {
     "slider-toggle": SliderToggle;
   }
 }
-
-export const SlyderToggleReact = createComponent({
-  tagName: 'toggle-slider',
-  elementClass: SliderToggle,
-  react: React,
-  events: {
-    onclick: '_clicked',
-  },
-})
