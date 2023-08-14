@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement } from "lit";
 export declare class MyButton extends LitElement {
     checked: boolean;
     social: string;
@@ -8,7 +8,7 @@ export declare class MyButton extends LitElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'my-button': MyButton;
+        "my-button": MyButton;
     }
 }
 export declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<MyButton, {
