@@ -16,7 +16,7 @@
   "types": "dist/types/src/components/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc --outDir dist/types --declarationDir dist/types && vite build",
     "preview": "vite preview",
     "build-storybook": "storybook build",
     "storybook": "concurrently \"npm:watch:*\"",

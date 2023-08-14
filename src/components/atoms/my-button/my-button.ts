@@ -1,9 +1,6 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-import React from 'react'
-import { createComponent } from '@lit-labs/react'
-
 import { TWStyles } from '../../../../tw.js'
 
 @customElement('my-button')
@@ -36,12 +33,3 @@ declare global {
     'my-button': MyButton
   }
 }
-
-export const MyButtonReact = createComponent({
-  tagName: 'my-button',
-  elementClass: MyButton,
-  react: React,
-  events: {
-    onclick: '_clicked',
-  },
-})
