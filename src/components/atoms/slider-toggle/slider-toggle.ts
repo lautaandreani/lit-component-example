@@ -53,7 +53,7 @@ declare global {
   }
 }
 
-export const MyButtonReact = createComponent({
+export const SliderToggleReact = createComponent({
   tagName: 'slider-toggle',
   elementClass: SliderToggle,
   react: React,
