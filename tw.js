@@ -585,6 +585,11 @@ video {
   background-color: rgb(36 41 47 / var(--tw-bg-opacity));
 }
 
+.\\!bg-indigo-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(129 140 248 / var(--tw-bg-opacity)) !important;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -620,6 +625,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .shadow-lg {

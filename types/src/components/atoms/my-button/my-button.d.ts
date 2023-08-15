@@ -1,7 +1,11 @@
 import { LitElement } from 'lit';
+declare enum TypeSocial {
+    FACEBOOK = "facebook",
+    TWITTER = "twitter"
+}
 declare class MyButton extends LitElement {
     checked: boolean;
-    social: string;
+    social: TypeSocial;
     static styles: import("lit").CSSResult[];
     private _clicked;
     render(): import("lit").TemplateResult<1>;

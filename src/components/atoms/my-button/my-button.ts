@@ -5,10 +5,16 @@ import { TWStyles } from '../../../../tw.js'
 import { createComponent } from '@lit-labs/react'
 import React from 'react'
 
+
+enum TypeSocial {
+  FACEBOOK = 'facebook',
+  TWITTER = 'twitter'
+}
+
 @customElement('my-button')
 class MyButton extends LitElement {
   @property({ type: Boolean }) checked = false
-  @property({ type: String }) social = 'Github'
+  @property({ type: TypeSocial }) social = TypeSocial.FACEBOOK
 
   static styles = [css``, TWStyles]
 
