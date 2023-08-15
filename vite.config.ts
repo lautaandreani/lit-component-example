@@ -29,5 +29,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts({ rollupTypes: true })],
+  plugins: [dts({ rollupTypes: true, insertTypesEntry: true, outDir: 'dist/types' })],
 })

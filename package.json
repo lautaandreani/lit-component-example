@@ -6,20 +6,19 @@
   "main": "dist",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/types/my-button.d.ts",
       "import": "./dist/components",
-      "require": "./dist/components/index.js"
+      "require": "./dist/components/atoms"
     },
-    "./lit-component-example/atoms/button": "./dist/components/atoms/my-button.js",
-    "./lit-component-example/atoms/toggle": "./dist/components/atoms/slider-toggle.js"
+    "./atoms": "./dist/components/atoms/my-button.js"
   },
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
+  "types": "./dist/types/my-button.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --outDir dist/types --declarationDir dist/types && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "build-storybook": "storybook build",
     "storybook": "concurrently \"npm:watch:*\"",

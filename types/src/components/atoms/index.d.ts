@@ -1,2 +1,3 @@
-export * from './my-button';
-export * from './slider-toggle';
+import { MyButton } from './my-button';
+import { SliderToggle } from './slider-toggle';
+export { MyButton, SliderToggle };

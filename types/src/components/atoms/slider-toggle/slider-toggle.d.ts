@@ -10,3 +10,6 @@ declare global {
         "slider-toggle": SliderToggle;
     }
 }
+export declare const SliderToggleReact: import("@lit-labs/react").ReactWebComponent<SliderToggle, {
+    onclick: string;
+}>;

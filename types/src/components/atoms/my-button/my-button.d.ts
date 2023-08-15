@@ -11,3 +11,6 @@ declare global {
         'my-button': MyButton;
     }
 }
+export declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<MyButton, {
+    onclick: string;
+}>;
