@@ -6,15 +6,12 @@ import { createComponent } from '@lit-labs/react'
 import React from 'react'
 
 
-enum TypeSocial {
-  FACEBOOK = 'facebook',
-  TWITTER = 'twitter'
-}
+type Social = 'facebook' | 'twitter'
 
 @customElement('my-button')
 class MyButton extends LitElement {
   @property({ type: Boolean }) checked = false
-  @property({ type: TypeSocial }) social = TypeSocial.FACEBOOK
+  @property({ type: String }) social: Social = 'facebook'
 
   static styles = [css``, TWStyles]
 
