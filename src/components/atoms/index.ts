@@ -1,4 +1,4 @@
-import { MyButton } from './my-button'
-import { SliderToggle } from './slider-toggle'
+import { MyButton, MyButtonReact } from './my-button'
+import { SliderToggle, SliderToggleReact } from './slider-toggle'
 
-export { MyButton, SliderToggle }
+export { MyButton, MyButtonReact, SliderToggle, SliderToggleReact }

@@ -6,7 +6,7 @@ import { createComponent } from '@lit-labs/react'
 import React from 'react'
 
 @customElement('my-button')
-export class MyButton extends LitElement {
+class MyButton extends LitElement {
   @property({ type: Boolean }) checked = false
   @property({ type: String }) social = 'Github'
 
@@ -36,7 +36,7 @@ declare global {
   }
 }
 
-export const MyButtonReact = createComponent({
+const MyButtonReact = createComponent({
   tagName: 'my-button',
   elementClass: MyButton,
   react: React,
@@ -44,3 +44,8 @@ export const MyButtonReact = createComponent({
     onclick: 'clicked'
   }
 })
+
+export {
+  MyButton, 
+  MyButtonReact
+}

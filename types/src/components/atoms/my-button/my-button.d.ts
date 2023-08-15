@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
-export declare class MyButton extends LitElement {
+declare class MyButton extends LitElement {
     checked: boolean;
     social: string;
     static styles: import("lit").CSSResult[];
@@ -11,6 +11,7 @@ declare global {
         'my-button': MyButton;
     }
 }
-export declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<MyButton, {
+declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<MyButton, {
     onclick: string;
 }>;
+export { MyButton, MyButtonReact };

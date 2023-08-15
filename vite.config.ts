@@ -50,16 +50,21 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: './src/components',
+      entry: {
+        ...Object.fromEntries(
+          componentFolders.map(folderName => [folderName, `./src/components/atoms/${folderName}/index.ts`])
+        ),
+        index: './src/components/atoms/index.ts'
+      },
       formats: ['es'],
     },
     rollupOptions: {
       external: [/^(lit|react)/],
       output: {
-        entryFileNames: `components/atoms/index.js`,
+        entryFileNames: `components/atoms/[name].js`,
         format: 'es',
       },
     },
   },
-  plugins: [dts({ rollupTypes: true, outDir: 'dist/types' })],
+  plugins: [dts({ rollupTypes: true, insertTypesEntry: true, outDir: 'dist/types' })],
 })
