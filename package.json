@@ -4,6 +4,7 @@
   "version": "0.24.0",
   "type": "module",
   "main": "dist",
+  "module": "./dist/components/atoms",
   "exports": {
     ".": {
       "types": "./dist/types/my-button.d.ts",
