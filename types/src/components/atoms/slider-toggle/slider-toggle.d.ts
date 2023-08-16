@@ -10,4 +10,6 @@ declare global {
         "ch-lit-slider-toggle": ChLitSliderToggle;
     }
 }
-export declare const SliderToggleReact: import("@lit-labs/react").ReactWebComponent<HTMLElement, Record<string, string | import("@lit-labs/react").EventName>>;
+export declare const SliderToggleReact: import("@lit-labs/react").ReactWebComponent<ChLitSliderToggle, {
+    onclick: string;
+}>;

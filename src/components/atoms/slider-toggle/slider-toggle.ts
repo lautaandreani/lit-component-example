@@ -2,7 +2,10 @@ import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
 import { TWStyles } from '@/tw.js'
-import { cn, createReactComponent } from "@/src/lib/utils.js";
+import { cn } from "@/src/lib/utils.js";
+
+import { createComponent } from "@lit-labs/react";
+import React from "react";
 
 @customElement('ch-lit-slider-toggle')
 export class ChLitSliderToggle extends LitElement {
@@ -41,9 +44,10 @@ declare global {
   }
 }
 
-export const SliderToggleReact = createReactComponent({
+export const SliderToggleReact = createComponent({
   tagName: 'ch-lit-slider-toggle',
-  webComponent: ChLitSliderToggle,
+  react: React,
+  elementClass: ChLitSliderToggle,
   events: {
     onclick: 'clicked'
   }
