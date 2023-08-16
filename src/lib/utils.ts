@@ -1,4 +1,4 @@
-import { createComponent } from '@lit-labs/react'
+import { EventName, createComponent } from '@lit-labs/react'
 import React from 'react'
 
 import { clsx, type ClassValue } from 'clsx'
@@ -11,7 +11,7 @@ export function cn(...inputs: ClassValue[]) {
 interface ComponentProps<T> {
   tagName: string
   webComponent: new () => T
-  events: Record<string, string>
+  events: Record<string, EventName | string>
 }
 
 export function createReactComponent({ tagName, webComponent, events }: ComponentProps<HTMLElement>) {

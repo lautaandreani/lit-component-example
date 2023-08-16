@@ -2,7 +2,10 @@ import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 import { TWStyles } from '@/tw.js'
-import { cn, createReactComponent } from '@/src/lib/utils'
+import { cn } from '@/src/lib/utils'
+
+import { createComponent } from '@lit-labs/react'
+import React from 'react'
 
 type Social = 'facebook' | 'twitter'
 
@@ -54,9 +57,10 @@ declare global {
   }
 }
 
-const MyButtonReact = createReactComponent({
+const MyButtonReact = createComponent({
   tagName: 'ch-lit-my-button',
-  webComponent: ChLitMyButton,
+  react: React,
+  elementClass: ChLitMyButton,
   events: {
     onclick: 'clicked',
   },
