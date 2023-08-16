@@ -12,5 +12,7 @@ declare global {
         'ch-lit-my-button': ChLitMyButton;
     }
 }
-declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<HTMLElement, Record<string, string>>;
+declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<ChLitMyButton, {
+    onclick: string;
+}>;
 export { ChLitMyButton, MyButtonReact };
