@@ -1,13 +1,13 @@
-import { MyButton } from './my-button'
+import { ChLitMyButton } from './my-button'
 import { html } from 'lit';
 
 export default {
-  component: 'my-button',
+  component: 'ch-lit-my-button',
 };
 
 export const Primary = {
   args: {
     social: 'Storybook'
   },
-  render: (args) => html`<my-button social=${args.social}>HELLO</my-button>`,
+  render: (args) => html`<ch-lit-my-button social=${args.social}>HELLO</ch-lit-my-button>`,
 };

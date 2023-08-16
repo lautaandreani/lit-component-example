@@ -1,5 +1,5 @@
 import { LitElement } from "lit";
-export declare class SliderToggle extends LitElement {
+export declare class ChLitSliderToggle extends LitElement {
     active: boolean;
     static styles: import("lit").CSSResult[];
     private toggleActive;
@@ -7,9 +7,7 @@ export declare class SliderToggle extends LitElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "slider-toggle": SliderToggle;
+        "ch-lit-slider-toggle": ChLitSliderToggle;
     }
 }
-export declare const SliderToggleReact: import("@lit-labs/react").ReactWebComponent<SliderToggle, {
-    onclick: string;
-}>;
+export declare const SliderToggleReact: import("@lit-labs/react").ReactWebComponent<HTMLElement, Record<string, string>>;

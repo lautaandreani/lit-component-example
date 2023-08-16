@@ -1,6 +1,6 @@
 import { LitElement } from 'lit';
 type Social = 'facebook' | 'twitter';
-declare class MyButton extends LitElement {
+declare class ChLitMyButton extends LitElement {
     checked: boolean;
     social: Social;
     static styles: import("lit").CSSResult[];
@@ -9,10 +9,8 @@ declare class MyButton extends LitElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'my-button': MyButton;
+        'ch-lit-my-button': ChLitMyButton;
     }
 }
-declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<MyButton, {
-    onclick: string;
-}>;
-export { MyButton, MyButtonReact };
+declare const MyButtonReact: import("@lit-labs/react").ReactWebComponent<HTMLElement, Record<string, string>>;
+export { ChLitMyButton, MyButtonReact };

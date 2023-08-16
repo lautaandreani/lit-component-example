@@ -1,13 +1,12 @@
 import { html } from 'lit';
-import { SliderToggle } from './slider-toggle'; // Ajusta la ruta al archivo slider-toggle.ts
+import { ChLitSliderToggle } from './slider-toggle'; // Ajusta la ruta al archivo slider-toggle.ts
 
 export default {
-  title: 'SliderToggle',
-  component: 'slider-toggle',
+  component: 'ch-lit-slider-toggle',
 };
 
 const Template = (args) =>
-  html`<slider-toggle .active="${args.active}"></slider-toggle>`;
+  html`<ch-lit-slider-toggle .active="${args.active}"></slider-toggle>`;
 
 export const Default = Template.bind({});
 Default.args = {

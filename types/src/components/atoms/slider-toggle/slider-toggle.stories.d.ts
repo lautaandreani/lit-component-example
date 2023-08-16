@@ -1,5 +1,4 @@
 declare namespace _default {
-    const title: string;
     const component: string;
 }
 export default _default;

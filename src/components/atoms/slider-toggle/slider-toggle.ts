@@ -1,26 +1,14 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
-import { TWStyles } from '../../../../tw.js'
-import { createComponent } from "@lit-labs/react";
-import React from "react";
+import { TWStyles } from '@/tw.js'
+import { cn, createReactComponent } from "@/src/lib/utils.js";
 
-@customElement('slider-toggle')
-export class SliderToggle extends LitElement {
+@customElement('ch-lit-slider-toggle')
+export class ChLitSliderToggle extends LitElement {
   @property({ type: Boolean }) active = false;
 
   static styles = [css`
-    :host {
-      display: inline-block;
-      width: 50px;
-      height: 30px;
-      background-color: #D1E500;
-      border-radius: 15px;
-      cursor: pointer;
-      position: relative;
-      transition: background-color 0.3s;
-    }
-
     .slider-circle {
       width: 20px;
       height: 20px;
@@ -39,7 +27,7 @@ export class SliderToggle extends LitElement {
 
   render() {
     return html`
-      <div class="${this.active ? 'active' : ''}" @click="${this.toggleActive}">
+      <div class="${cn('inline-block w-[50px] h-[30px] bg-[#D1E500] cursor-pointer relative transition-[background-color] duration-[0.3s] rounded-[15px]', '', {'active': this.active})}" @click="${this.toggleActive}">
         <div class="slider-circle shadow-lg" style="left: ${this.active ? 'calc(100% - 15px)' : '15px'};"></div>
       </div>
     `;
@@ -49,14 +37,13 @@ export class SliderToggle extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "slider-toggle": SliderToggle;
+    "ch-lit-slider-toggle": ChLitSliderToggle;
   }
 }
 
-export const SliderToggleReact = createComponent({
-  tagName: 'slider-toggle',
-  elementClass: SliderToggle,
-  react: React,
+export const SliderToggleReact = createReactComponent({
+  tagName: 'ch-lit-slider-toggle',
+  webComponent: ChLitSliderToggle,
   events: {
     onclick: 'clicked'
   }
