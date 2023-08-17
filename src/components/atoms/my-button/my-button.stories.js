@@ -7,7 +7,8 @@ export default {
 
 export const Primary = {
   args: {
-    social: 'Storybook'
+    isLoading: false,
+    slotContent: 'Label'
   },
-  render: (args) => html`<ch-lit-my-button social=${args.social}>HELLO</ch-lit-my-button>`,
+  render: (args) => html`<ch-lit-my-button .isLoading=${args.isLoading}>${args.slotContent}</ch-lit-my-button>`,
 };

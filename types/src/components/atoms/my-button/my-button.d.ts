@@ -1,8 +1,6 @@
 import { LitElement } from 'lit';
-type Social = 'facebook' | 'twitter';
 declare class ChLitMyButton extends LitElement {
-    checked: boolean;
-    social: Social;
+    isLoading: boolean;
     static styles: import("lit").CSSResult[];
     private _clicked;
     render(): import("lit").TemplateResult<1>;
